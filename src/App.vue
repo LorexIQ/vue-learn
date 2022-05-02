@@ -1,8 +1,10 @@
 <template>
-  <h2>Learn vue</h2>
-  <hr>
+  <div id="app">
+    <h2>Learn vue</h2>
+    <hr>
 
-  <router-view />
+    <router-view />
+  </div>
 </template>
 
 <style>
@@ -14,8 +16,11 @@
   color: #2c3e50;
   margin-top: 30px;
 }
-
 hr {
   border-top: 1px solid;
+}
+
+a {
+  text-decoration: none;
 }
 </style>

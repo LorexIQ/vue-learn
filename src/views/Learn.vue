@@ -1,22 +1,25 @@
 <template>
-  <h2>Learn vue</h2>
-  <hr>
-  <Add
-      @new-item="addItem"
-  />
-  <hr>
-  <select v-model="filter">
-    <option value="all">Всё</option>
-    <option value="done">Выполнено</option>
-    <option value="not-done">Не выполнено</option>
-  </select>
-  <List
-      v-if="filteredItems.length"
-      v-bind:list_items="filteredItems"
-      @delete-item="deleteItem"
-      @new-item="addItem"
-  />
-  <p v-else>Список пуст</p>
+  <div>
+    <h2>List</h2>
+    <router-link to="/">Home</router-link>
+    <hr>
+    <Add
+        @new-item="addItem"
+    />
+    <hr>
+    <select v-model="filter">
+      <option value="all">Всё</option>
+      <option value="done">Выполнено</option>
+      <option value="not-done">Не выполнено</option>
+    </select>
+    <List
+        v-if="filteredItems.length"
+        v-bind:list_items="filteredItems"
+        @delete-item="deleteItem"
+        @new-item="addItem"
+    />
+    <p v-else>Список пуст</p>
+  </div>
 </template>
 
 <script>

@@ -3,6 +3,7 @@
     <ul>
       <Item
         v-for="(item, i) of list_items"
+        :key="i"
         v-bind:item="item"
         v-bind:index="i"
         @remove-item="removeItem"
